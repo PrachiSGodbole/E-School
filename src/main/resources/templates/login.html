@@ -1,0 +1,109 @@
+<!--
+Author: 
+-->
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Log In</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Primary School Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<link href="/css/bootstrap.css" rel='stylesheet' type='text/css' />
+<!-- Custom Theme files -->
+<link href="/css/style.css" rel='stylesheet' type='text/css' />	
+<script src="/js/jquery.min.js"> </script>
+<!--webfonts-->
+<link href='http://fonts.googleapis.com/css?family=Arvo:400,700,400italic|PT+Sans:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+<!--//webfonts-->
+</head>
+<body>
+	<!----- start-header---->
+			<div id="home" class="header two">
+				<div class="top-header two">	
+						<div class="container">
+						<div class="logo">
+							<a href="/home"><h1>E-<span>School</span></h1></a>
+						</div>
+					<!----start-top-nav---->
+							<div class="top-menu">
+							<span class="menu"> </span>
+								<ul class="cl-effect-16">
+								 <li><a href="/home" data-hover="Home">Home</a></li>
+								<li><a  href="/about" data-hover="About">About</a></li>
+								<li><a href="/teachers" data-hover="Teachers">Teachers</a></li>
+								<li><a href="/contact" data-hover="Contact">Contact</a></li>
+								<li><a class="active" href="/login" data-hover="LogIn">Log In</a></li>
+								  <div class="clearfix"></div>
+								</ul>
+							</div>
+							<!-- script-for-menu -->
+								<script>
+									$("span.menu").click(function(){
+										$(".top-menu ul").slideToggle("slow" , function(){
+										});
+									});
+								</script>
+								<!-- script-for-menu -->
+						<div class="clearfix"> </div>
+					</div>
+				</div>
+			    <div class="clearfix"> </div>
+		</div>
+		<!----- //End-slider---->
+	<!--/contact-->
+	 <div class="contact">
+	 	<div class="container">
+					<div class="contact-head">
+							<h3>Log In</h3>
+							<p></p>
+					 </div>
+		<div class="contact-top">
+		     <div class="col-md-8 contact-form">
+						<form>
+							<input type="text" class="textbox" placeholder="Email" >
+							<input type="password" class="textbox" placeholder="Password">
+							<input type="submit" value="Send Now">
+						</form><br>
+						<a href="#" data-hover="ForgotPassword">Forgot Password</a>
+						
+				</div>
+			  <div class="clearfix"></div>
+		</div>
+	</div>
+		
+
+</div>
+	<!--address-->
+	
+	<!--start-smoth-scrolling-->
+			<script type="text/javascript">
+								jQuery(document).ready(function($) {
+									$(".scroll").click(function(event){		
+										event.preventDefault();
+										$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+									});
+								});
+								</script>
+							<!--start-smoth-scrolling-->
+						<script type="text/javascript">
+									$(document).ready(function() {
+										/*
+										var defaults = {
+								  			containerID: 'toTop', // fading element id
+											containerHoverID: 'toTopHover', // fading element hover id
+											scrollSpeed: 1200,
+											easingType: 'linear' 
+								 		};
+										*/
+										
+										$().UItoTop({ easingType: 'easeOutQuart' });
+										
+									});
+								</script>
+		<a href="#home" id="toTop" class="scroll" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+
+
+</body>
+</html>
