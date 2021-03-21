@@ -2,7 +2,8 @@ package com.schools.management.Model;
 
 public enum UserRoles {
 	ADMIN,
+	STAFF,
 	TEACHER,
-	PARENT,
+	GUARDIAN,
 	STUDENT
 }
