@@ -5,6 +5,9 @@ import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.MapsId;
 import javax.persistence.OneToOne;
@@ -18,6 +21,10 @@ import org.hibernate.annotations.UpdateTimestamp;
 @Entity
 @Table(name = "teacher")
 public class Teacher {
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
 
 	@OneToOne
 	@MapsId
@@ -30,8 +37,8 @@ public class Teacher {
 	@Column(name = "assignedDivision")
 	private Divisions assignedDivision;
 	
-	@Column(name = "subjects")
-	private List<Subjects> subjects;
+//	@Column(name = "subjects")
+//	private List<Subjects> subjects;
 	
 	@Column(name = "qualifications", nullable = false)
 	private String qualifications;
@@ -48,13 +55,13 @@ public class Teacher {
 
 	public Teacher() {}
 	
-	public Teacher(User userid, Standards assignedStandard, Divisions assignedDivision, List<Subjects> subjects,
+	public Teacher(User userid, Standards assignedStandard, Divisions assignedDivision, //List<Subjects> subjects,
 			String qualifications, Date createdAt, Date updatedAt) {
 		super();
 		this.userid = userid;
 		this.assignedStandard = assignedStandard;
 		this.assignedDivision = assignedDivision;
-		this.subjects = subjects;
+//		this.subjects = subjects;
 		this.qualifications = qualifications;
 		this.createdAt = createdAt;
 		this.updatedAt = updatedAt;
@@ -84,13 +91,13 @@ public class Teacher {
 		this.assignedDivision = assignedDivision;
 	}
 
-	public List<Subjects> getSubjects() {
-		return subjects;
-	}
-
-	public void setSubjects(List<Subjects> subjects) {
-		this.subjects = subjects;
-	}
+//	public List<Subjects> getSubjects() {
+//		return subjects;
+//	}
+//
+//	public void setSubjects(List<Subjects> subjects) {
+//		this.subjects = subjects;
+//	}
 
 	public String getQualifications() {
 		return qualifications;
@@ -119,7 +126,7 @@ public class Teacher {
 	@Override
 	public String toString() {
 		return "Teacher [userid=" + userid + ", assignedStandard=" + assignedStandard + ", assignedDivision="
-				+ assignedDivision + ", subjects=" + subjects + ", qualifications=" + qualifications + ", createdAt="
+				+ assignedDivision + ", qualifications=" + qualifications + ", createdAt="
 				+ createdAt + ", updatedAt=" + updatedAt + "]";
 	}
 	

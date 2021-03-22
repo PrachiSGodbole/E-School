@@ -76,7 +76,7 @@ public class User {
     @PrimaryKeyJoinColumn
     private Staff staff;
 	
-	@OneToMany(mappedBy = "menuItemId", cascade = CascadeType.ALL)
+	@OneToMany(mappedBy = "userId", cascade = CascadeType.ALL)
 	@JsonIgnore
 	@PrimaryKeyJoinColumn
 	private List<Achievements> achievements;

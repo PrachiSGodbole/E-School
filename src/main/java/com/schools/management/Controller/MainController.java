@@ -15,7 +15,7 @@ public class MainController {
 	public ModelAndView home()   
 	{
 		ModelAndView model = new ModelAndView();
-		model.setViewName("login");
+		model.setViewName("index");
 		return model;
 	}
 	
