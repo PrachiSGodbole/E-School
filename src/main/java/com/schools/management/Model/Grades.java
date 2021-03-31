@@ -17,6 +17,7 @@ import javax.persistence.PrimaryKeyJoinColumn;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import javax.persistence.Transient;
 
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
@@ -49,6 +50,7 @@ public class Grades {
 	@Column(name = "updated_at")
 	private Date updatedAt;
 
+	@Transient
 	private List<SubjectGradeJson> subjectGradeJson ;
 	
 	public Grades() {}

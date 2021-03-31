@@ -13,6 +13,7 @@ public class ExternalQueryService {
 	private ExternalQueryRepository externalQueryRepository;
 	
 	public void saveQuery(ExternalQueries externalQueries) {
+		externalQueries.setIsActive(true);
 		externalQueryRepository.save(externalQueries);
 	}
 }
