@@ -2,7 +2,7 @@
 Author: 
 -->
 <!DOCTYPE HTML>
-<html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
 <head>
 <title>Contact Us</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -97,10 +97,17 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			     
 			 </div>
 			 <div class="col-md-8 contact-form">
-						<form>
-						<input type="text" class="textbox"  placeholder="Name">
-							<input type="text" class="textbox" placeholder="Email">
-							<textarea placeholder="Message">Message</textarea>
+						<form th:action="@{/contactResponse}" method="post" th:object="${externalQueries}">
+						<div class="row">
+								<div class="col-md-3"></div>
+								<div class="col-md-6" style=" left: -189px;">
+									<div class="alert alert-success" role="alert" th:if="${msg}"
+										th:utext="${msg}"></div>
+								</div>
+						</div>
+						<input type="text" class="textbox"  placeholder="Name" th:field="*{name}" id="name" required="required">
+							<input type="text" class="textbox" placeholder="Email" th:field="*{email}" id="email" required="required">
+							<textarea placeholder="Message" th:field="*{message}" id="message" required="required">Message</textarea>
 							<input type="submit" value="Send Now">
 						</form>
 				</div>

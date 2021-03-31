@@ -66,10 +66,6 @@ public class User {
 	
 	@OneToOne(mappedBy = "userid", cascade = CascadeType.ALL)
     @PrimaryKeyJoinColumn
-    private Student student;
-	
-	@OneToOne(mappedBy = "userid", cascade = CascadeType.ALL)
-    @PrimaryKeyJoinColumn
     private Teacher teacher;
 	
 	@OneToOne(mappedBy = "userid", cascade = CascadeType.ALL)
@@ -85,8 +81,8 @@ public class User {
 	}
 
 	public User(Long id, String name, String email, String phoneNumber, String address, String password,
-			UserRoles userRoles, Date createdAt, Date updatedAt, Boolean isEnabled, Guardian guardian, Student student,
-			Teacher teacher, Staff staff, List<Achievements> achievements) {
+			UserRoles userRoles, Date createdAt, Date updatedAt, Boolean isEnabled, Guardian guardian, Teacher teacher,
+			Staff staff, List<Achievements> achievements) {
 		super();
 		this.id = id;
 		this.name = name;
@@ -99,7 +95,6 @@ public class User {
 		this.updatedAt = updatedAt;
 		this.isEnabled = isEnabled;
 		this.guardian = guardian;
-		this.student = student;
 		this.teacher = teacher;
 		this.staff = staff;
 		this.achievements = achievements;
@@ -193,14 +188,6 @@ public class User {
 		this.guardian = guardian;
 	}
 
-	public Student getStudent() {
-		return student;
-	}
-
-	public void setStudent(Student student) {
-		this.student = student;
-	}
-
 	public Teacher getTeacher() {
 		return teacher;
 	}
@@ -229,10 +216,10 @@ public class User {
 	public String toString() {
 		return "User [id=" + id + ", name=" + name + ", email=" + email + ", phoneNumber=" + phoneNumber + ", address="
 				+ address + ", password=" + password + ", userRoles=" + userRoles + ", createdAt=" + createdAt
-				+ ", updatedAt=" + updatedAt + ", isEnabled=" + isEnabled + ", guardian=" + guardian + ", student="
-				+ student + ", teacher=" + teacher + ", staff=" + staff + ", achievements=" + achievements + "]";
+				+ ", updatedAt=" + updatedAt + ", isEnabled=" + isEnabled + ", guardian=" + guardian + ", teacher="
+				+ teacher + ", staff=" + staff + ", achievements=" + achievements + "]";
 	}
-	
+
 	
 	
 }

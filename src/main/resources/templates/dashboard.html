@@ -2,9 +2,9 @@
 Author: 
 -->
 <!DOCTYPE HTML>
-<html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
 <head>
-<title>Log In</title>
+<title>Welcome</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="keywords" content="Primary School Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
@@ -24,17 +24,17 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<div class="top-header two">	
 						<div class="container">
 						<div class="logo">
-							<a href="/home"><h1>E-<span>School</span></h1></a>
+							<a href="/home"><h1>Welcome <span th:text="' '+${userName}"></span></h1></a>
 						</div>
 					<!----start-top-nav---->
 							<div class="top-menu">
 							<span class="menu"> </span>
 								<ul class="cl-effect-16">
-								 <li><a href="/home" data-hover="Home">Home</a></li>
-								<li><a  href="/about" data-hover="About">About</a></li>
-								<li><a href="/teachers" data-hover="Teachers">Teachers</a></li>
+								<li><a class="active" href="/dashboard" data-hover="Dashboard">Dashboard</a></li>
+								<li><a href="#" data-hover="Student">Student</a></li>
+								<li><a  href="#" data-hover="Notices">Notices</a></li>
 								<li><a href="/contact" data-hover="Contact">Contact</a></li>
-								<li><a class="active" href="/login" data-hover="LogIn">Log In</a></li>
+								<li><a href="/signout" data-hover="LogOut">Log Out</a></li>
 								  <div class="clearfix"></div>
 								</ul>
 							</div>
@@ -53,28 +53,52 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		</div>
 		<!----- //End-slider---->
 	<!--/contact-->
-	 <div class="contact">
-	 	<div class="container">
-					<div class="contact-head">
-							<h3>Log In</h3>
-							<p></p>
-					 </div>
-		<div class="contact-top">
-		     <div class="col-md-8 contact-form">
-						<form>
-							<input type="text" class="textbox" placeholder="Email" >
-							<input type="password" class="textbox" placeholder="Password">
-							<input type="submit" value="Log In">
-						</form><br>
-						<a href="#" data-hover="ForgotPassword">Forgot Password</a>
-						
+	
+	<div class="culture-section">
+		<div class="container">
+				<div class="culture-head">
+					<h3>Our Events</h3>
+					<p>Don'T Miss our Events</p>
 				</div>
-			  <div class="clearfix"></div>
-		</div>
-	</div>
-		
+				 <div class="culture">
+					        <div class="col-md-6 culture-grids">
+                              <img src="images/event1.jpg" class="img-responsive" alt="" />
+								<div class="e_date">
+                                     <h4>15<br> <span>July</span></h4>
+                                </div>
+								 <a ><h5>ART SESSION</h5></a>
+								<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+							</div>
+							<div class="col-md-6 culture-grids">
+								 <img src="images/event2.jpg" class="img-responsive" alt="" />
+								<div class="e_date">
+                                    <h4>15<br> <span>July</span></h4>
+                                </div>
+								 <a><h5>ART SESSION</h5></a>
+								<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
 
-</div>
+							</div>
+							<div class="col-md-6 culture-grids">
+								  <img src="images/event3.jpg" class="img-responsive" alt="" />
+								<div class="e_date">
+                                    <h4>15<br> <span>July</span></h4>
+                                </div>
+								 <a><h5>ART SESSION</h5></a>
+								<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+							</div>
+							<div class="col-md-6 culture-grids">
+								   <img src="images/event4.jpg" class="img-responsive" alt="" />
+								<div class="e_date">
+                                   <h4>15<br> <span>July</span></h4>
+                                </div>
+								<a> <h5>ART SESSION</h5></a>
+								<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+							</div>
+							<div class="clearfix"> </div>
+					   </div>
+				 </div>
+			</div>
+			
 	<!--address-->
 	
 	<!--start-smoth-scrolling-->

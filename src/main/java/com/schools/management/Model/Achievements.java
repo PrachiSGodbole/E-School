@@ -31,6 +31,11 @@ public class Achievements {
 	@PrimaryKeyJoinColumn
 	private User userId;
 	
+	@ManyToOne
+	@JsonIgnore
+	@PrimaryKeyJoinColumn
+	private Student studentId;
+	
 	@Column(name = "award", nullable = false)
 	private String award;
 	
@@ -48,11 +53,13 @@ public class Achievements {
 	private Date updatedAt;
 
 	public Achievements() {}
-	
-	public Achievements(Long id, User userId, String award, String description, Date createdAt, Date updatedAt) {
+
+	public Achievements(Long id, User userId, Student studentId, String award, String description, Date createdAt,
+			Date updatedAt) {
 		super();
 		this.id = id;
 		this.userId = userId;
+		this.studentId = studentId;
 		this.award = award;
 		this.description = description;
 		this.createdAt = createdAt;
@@ -73,6 +80,14 @@ public class Achievements {
 
 	public void setUserId(User userId) {
 		this.userId = userId;
+	}
+
+	public Student getStudentId() {
+		return studentId;
+	}
+
+	public void setStudentId(Student studentId) {
+		this.studentId = studentId;
 	}
 
 	public String getAward() {
@@ -109,8 +124,8 @@ public class Achievements {
 
 	@Override
 	public String toString() {
-		return "Achievements [id=" + id + ", userId=" + userId + ", award=" + award + ", description=" + description
-				+ ", createdAt=" + createdAt + ", updatedAt=" + updatedAt + "]";
+		return "Achievements [id=" + id + ", userId=" + userId + ", studentId=" + studentId + ", award=" + award
+				+ ", description=" + description + ", createdAt=" + createdAt + ", updatedAt=" + updatedAt + "]";
 	}
 	
 	
